@@ -1,1 +1,1 @@
-export * from './freeze.pipe'
+export * from './me.pipe'

@@ -1,10 +1,14 @@
 {
   "name": "nestjs-request-response-pipeline",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Implement Middleware, Gard, Interceptor, Pipes and Filters in Nestjs.",
+  "author": "Amir Kangarloo <https://github.com/amirkangarloo>",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/amirkangarloo/nestjs-request-response-pipeline"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
