@@ -1,4 +1,4 @@
-import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/common';
+import { MiddlewareConsumer, Module, NestModule, RequestMethod, Scope } from '@nestjs/common';
 import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { AppController } from './controller';
 import { AuthGuard } from './guard';
@@ -18,6 +18,7 @@ import { AppService, RequestService } from './service';
     },
     {
       provide: APP_INTERCEPTOR,
+      scope: Scope.REQUEST,
       useClass: LoggerInterceptor
     }
   ],
