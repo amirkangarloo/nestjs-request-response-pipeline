@@ -5,7 +5,11 @@ Implement [Middleware](https://docs.nestjs.com/middleware), [Gard](https://docs.
 ## Installation
 
 ```bash
-$ npm install
+git clone https://github.com/amirkangarloo/nestjs-request-response-pipeline.git
+```
+
+```bash
+npm install
 ```
 
 ## Running the app
@@ -21,17 +25,15 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## URL
 
 ```bash
-# unit tests
-$ npm run test
+curl --location --request GET 'http://localhost:4000?userId=10' /n
+```
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+```bash
+curl --location --request GET 'http://localhost:4000/error' \
+--data-raw '' /n
 ```
 
 ## License
