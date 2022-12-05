@@ -1,6 +1,7 @@
 import { MiddlewareConsumer, Module, NestModule, RequestMethod, Scope } from '@nestjs/common';
-import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
+import { APP_FILTER, APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { AppController } from './controller';
+import { HttpExceptionFilter } from './filter';
 import { AuthGuard } from './guard';
 import { LoggerInterceptor } from './interceptor';
 import { AuthMiddleware } from './middleware';
@@ -20,6 +21,10 @@ import { AppService, RequestService } from './service';
       provide: APP_INTERCEPTOR,
       scope: Scope.REQUEST,
       useClass: LoggerInterceptor
+    },
+    {
+      provide: APP_FILTER,
+      useClass: HttpExceptionFilter
     }
   ],
 })
